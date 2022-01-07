@@ -1,0 +1,12 @@
+<% @recipes.each do |recipe| %>
+  <div class="recipe-public-data flex-row">
+    <div class="recipe-public-left flex-col">
+      <p><%= recipe.name %></p>
+      <p>By: <%= recipe.user.name %></p>
+    </div>
+    <div class="recipe-public-right flex-col">
+      <p>Total food items:</p>
+      <p>Total price</p>
+    </div>
+  </div>
+<% end %>

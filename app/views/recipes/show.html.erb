@@ -1,0 +1,22 @@
+<div class="recipe-name flex-row">
+  <%= @recipe.name %>
+</div>
+
+<div class="recipe-data flex-row">
+  <div class="recipe-info flex-col">
+    <p>Preparation time: <%= @recipe.preparation_time %></p>
+    <p>Cooking time: <%= @recipe.cooking_time %></p>
+    <p><%= @recipe.description %></p>
+  </div>
+  <div class="recipe-info flex-col">
+    Public: <%= @recipe.public %>
+  </div>
+</div>
+
+<div class="recipe-actions flex-row">
+  <%= button_to "Add ingredient" %>
+</div>
+
+<div class="recipe-ingredients flex-row">
+
+</div>
