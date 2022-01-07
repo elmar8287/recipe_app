@@ -23,15 +23,6 @@ class RecipesController < ApplicationController
     redirect_to recipes_path
   end
 
-  def create
-    @recipe = current_user.recipes.build(recipe_params)
-    if @recipe.save
-      flash[:notice] = 'Recipe successfully added!'
-    end
-    redirect_to recipes_path
-  end
-
-
   def destroy
     @recipe = Recipe.find(params[:id])
     authorize! :destroy, @recipe

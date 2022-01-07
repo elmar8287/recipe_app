@@ -1,5 +1,5 @@
 <h1>MY NEW PAGE</h1>
-<div class = add-food-form>
+<div class = >
   <%= form_with model: [current_user.foods.build], class: "form" do |f| %>
       <%= f.label :food_name  %>
       <%= f.text_field :name, autofocus: true, placeholder: 'Bananas'%>
@@ -8,12 +8,12 @@
       <%= f.label :price %>
       <%= f.number_field :price, placeholder: '20$' %>
     <p>
-      <%= f.submit 'Add food', class: 'add-food-btn' %>
+      <%= f.submit 'Add food', class: '' %>
     </p>
   <% end %>
 
-  <div class = "back-btn-holder">
-    <button class = "back-btn">
+  <div class = "">
+    <button class = "">
       <%= link_to 'Back', foods_path%>
     </button>
   </div>
