@@ -1,0 +1,23 @@
+.food-container {
+  width: 600px;
+  margin: 2rem auto auto auto;
+
+  .add-food-btn {
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  table {
+    background-color: #ccc;
+  }
+
+  td {
+    background-color: beige;
+    padding: 0.3rem;
+  }
+
+  th {
+    padding: 0.3rem;
+    background-color: lightgrey;
+  }
+}
