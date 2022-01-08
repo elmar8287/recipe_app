@@ -19,7 +19,6 @@
 - General shopping list view
 - Navigation menu
 - Make sure there are no N+1 queries happening
-- Project 11: Add API endpoints
 
 ## Getting Started
 
