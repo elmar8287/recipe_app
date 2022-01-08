@@ -1,10 +1,10 @@
 <% @recipes.each do |recipe| %>
-  <div class="">
-    <div class="">
+  <div class="recipe-public-data flex-row">
+    <div class="recipe-public-left flex-col">
       <p><%= link_to recipe.name, recipe_path(recipe) %></p>
       <small class = "recipe-by-name">By: <%= recipe.user.name %></small>
     </div>
-    <div class="">
+    <div class="recipe-public-right flex-col">
       <p>Total food items: <%= recipe.recipe_foods.size%></p>
       <p>Total price: <%= number_to_currency(recipe.total_price)%></p>
     </div>
