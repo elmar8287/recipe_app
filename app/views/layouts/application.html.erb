@@ -11,6 +11,29 @@
   </head>
 
   <body>
+    <header>
+      <div class = "nav-top">
+        <div class = "flash-msg">
+          <% flash.each do |type, msg| %>
+            <%= msg %>
+          <% end %>
+        </div>
+        <div class = "sign-nav">
+          <%= render partial: 'shared/sign_options_nav'%>
+          <% if user_signed_in?%>
+            <p class = "role">
+              <% if current_user != nil%>
+                <%= current_user.name.capitalize%>
+              <% end %>
+            </p>
+          <% end %>
+        </div>
+      </div>
+      <div class = "nav-bottom">
+        <%= render partial: 'shared/navigation'%>
+      </div>
+    </header>
     <%= yield %>
   </body>
+
 </html>
