@@ -7,4 +7,14 @@
         <%= f.select :food_id, current_user.foods.collect {|food| [food.name, food.id] }, { include_blank: true} %>
      </div>
   </div>
+  <div class="field">
+    <%= f.label :quantity, class: "label" %>
+    <div class="quality">
+      <%= f.text_field :quantity, class: "input", required: true, min: 0 %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit  "Edit recipe food", class: "button is-success" %>
+  </div>
   <$ end %>
