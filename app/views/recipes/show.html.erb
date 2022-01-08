@@ -15,3 +15,39 @@
 <% end%>
   </div>
 </div>
+<div class="recipe-actions">
+    <%= link_to 'Generate shopping list', general_shopping_list_path(id: @recipe), class: "btn" %>
+    <% if can? :update, @recipe %>
+      <button class = "btn ">
+        <%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe), class: "btn" %>
+      </button>
+    <% end %>
+  </div>
+
+  <div class = "hidden-text">
+  </div>
+
+    <table class="recipe-ingredients flex-row">
+      <% if @recipe.recipe_foods.any? %>
+        <tr>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Value</th>
+          <th>Actions</th>
+        </tr>
+        <% end %>
+        <% @recipe.recipe_foods.each do |food| %>
+          <tr>
+            <td><%= food.food.name%></td>
+            <td><%= food.quantity%> <%= food.food.measurement_units%></td>
+            <td><%= number_to_currency(food.food.price*food.quantity)%></td>
+            <td class = "recipe-food-buttons">
+              <% if can? :update,  @recipe %>
+                <%= link_to "Modify", edit_recipe_food_path(food)%>
+                <%= link_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: food.id), method: :delete, data: { confirm: "Are you sure you want to remove the food?" } %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+    </table>
+</div>
