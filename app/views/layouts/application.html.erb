@@ -8,6 +8,8 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
 
   <body>
@@ -29,11 +31,12 @@
           <% end %>
         </div>
       </div>
-      <div class = "nav-bottom">
-        <%= render partial: 'shared/navigation'%>
-      </div>
+       <% if user_signed_in? %>
+        <div class = "nav-bottom">
+          <%= render partial: 'shared/navigation'%>
+        </div>
+      <% end %>
     </header>
     <%= yield %>
   </body>
-
 </html>
