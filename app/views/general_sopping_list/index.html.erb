@@ -1,0 +1,35 @@
+<div class = "shopping-container">
+
+<h3>SHOPPING LIST</h3>
+  <div class = "">
+    <p>Amount of food to buy: <%= @recipe.recipe_foods.size%></p>
+
+      <% array = []%>
+      <% @recipe.recipe_foods.each do |recipe_food|%>
+        <% @single = recipe_food.quantity*recipe_food.food.price %>
+        <% array << @single %>
+      <% end %>
+      <p>Total value of food needed: <%= number_to_currency(array.sum)%></p>
+  </div>
+
+  <table class="">
+    <% if @recipe.recipe_foods.any? %>
+      <tr>
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    <% end %>
+      <% @recipe.recipe_foods.each do |food| %>
+        <tr>
+          <td><%= food.food.name%></td>
+          <td><%= food.quantity%> <%= food.food.measurement_units%></td>
+          <td><%= number_to_currency(food.food.price*food.quantity)%></td>
+        </tr>
+      <% end %>
+  </table>
+
+    <button class = "">
+  <%= link_to 'Back to my recipe', recipe_path(@recipe) %>
+  </button>
+</div>
