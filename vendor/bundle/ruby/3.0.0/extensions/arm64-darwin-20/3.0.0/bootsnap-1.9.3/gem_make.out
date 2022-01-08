@@ -1,0 +1,15 @@
+current directory: /Users/elmar/recipe/recipe_app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+/Users/elmar/.rvm/rubies/ruby-3.0.0/bin/ruby -I /Users/elmar/.rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0 -r ./siteconf20220108-34119-jx7cpw.rb extconf.rb
+creating Makefile
+
+current directory: /Users/elmar/recipe/recipe_app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/elmar/recipe/recipe_app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/elmar/recipe/recipe_app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+make "DESTDIR=" install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20220108-34119-52h5bk/bootsnap
