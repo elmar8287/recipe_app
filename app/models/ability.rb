@@ -1,4 +1,4 @@
-class Ability < ApplicationRecord
+class Ability
   include CanCan::Ability
 
   def initialize(user)
@@ -10,7 +10,6 @@ class Ability < ApplicationRecord
       can :manage, Food, user: user
 
       can :manage, Recipe, user: user
-
     end
   end
 end
