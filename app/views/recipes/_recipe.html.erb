@@ -1,0 +1,13 @@
+<div class="">
+  <div class="">
+    <p><%= link_to recipe.name, recipe_path(recipe) %></p>
+      <% if can? :destroy,  recipe %>
+        <button>
+          <%= link_to "REMOVE", recipe_path(recipe), method: :delete, data: { confirm: "Are you sure you want to delete this recipe?" }, class: "remove-recipe-btn"%>
+        </button>
+      <%end%>
+  </div>
+  <div class="recipe-secondary">
+    <p><%= recipe.description %></p>
+  </div>
+</div>

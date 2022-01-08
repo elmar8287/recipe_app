@@ -1,9 +1,9 @@
 <h1>FOOD PAGE</h1>
-<div class = 'food-container'>
-  <button class = "add-food-btn btn">
+<div class = ''>
+  <button class = "">
    <%= link_to "Add food", new_food_path, id: "add-food" %>
   </button>
-  <div class = 'foods-container'>
+  <div class = ''>
     <table>
       <tr>
         <th>Food</th>
@@ -12,13 +12,13 @@
         <th>Action</th>
       </tr>
       <% @foods.each do |food| %>
-        <tr class = 'food-list'>
+        <tr class = ''>
           <td> <%= food.name %> </td>
           <td> <%= food.measurmnet_units %> </td>
           <td> <%= food.price %> $</td>
            <td>
               <% if can? :destroy, food %>
-                <button class = 'delete-btn'>
+                <button class = ''>
                   <%= link_to "Delete",food_path(food.id), method: :delete, data: { confirm: "Are you sure?" } %>
                 </button>
           <% end %>

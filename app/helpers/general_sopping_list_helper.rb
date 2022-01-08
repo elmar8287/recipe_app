@@ -1,0 +1,2 @@
+module GeneralSoppingListHelper
+end
