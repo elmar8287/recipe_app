@@ -1,135 +1,118 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
- 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  .profiler-result {
-    display: none;
-  }
-  
-  .flex-row {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  .flash-msg {
-    margin-left: 0.5rem;
-  }
-  
-  .btn {
-    padding: 0.4rem;
-  }
-  
-  .back-btn {
-    padding: 0.4rem;
-    min-width: 8rem;
-  }
-  
-  .delete-btn {
-    padding: 0.2rem;
-  }
-  
-  .flex-col {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .nav-top {
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    background-color: lightgray;
-  }
-  
-  .sign-nav {
-    display: flex;
-    gap: 0.5rem;
-    align-items: baseline;
-  }
-  
-  .sign-nav-ul {
-    display: flex;
-    gap: 1rem;
-    color: black;
-    opacity: 0.5;
-  }
-  
-  .role {
-    min-width: 60px;
-    text-align: end;
-    font-size: 20px;
-    color: black;
-  }
-  
-  .sign-nav-list {
-    font-size: 18px;
-  }
-  
-  .nav-bottom {
-    background-color: antiquewhite;
-  }
-  
-  .nav-ul {
-    display: flex;
-    gap: 0.5rem;
-    font-size: 18px;
-    padding: 0.4rem;
-  }
-  
-  .nav-list {
-    border: 1px solid gray;
-    border-radius: 0.5rem;
-    padding: 0.2rem 0.5rem;
-    background-color: gainsboro;
-  }
-  
-  .nav-active-link {
-    color: black;
-    opacity: 0.5;
-  }
-  
-  .remove-recipe-btn {
-    padding: 0.2rem 0.5rem;
-  }
-  
-  .recipe-ingredients {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  tr {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 0.5rem;
-    justify-content: flex-start;
-  }
-  
-  .sign-forms {
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.profiler-result {
+  display: none;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  list-style: none;
+}
+
+.flash-msg {
+  margin-left: 0.5rem;
+}
+
+.btn {
+  padding: 0.4rem;
+}
+
+.back-btn {
+  padding: 0.4rem;
+  min-width: 8rem;
+}
+
+.delete-btn {
+  padding: 0.2rem;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-top {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: lightgray;
+}
+
+.sign-nav {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.sign-nav-ul {
+  display: flex;
+  gap: 1rem;
+  color: black;
+  opacity: 0.5;
+}
+
+.role {
+  min-width: 60px;
+  text-align: end;
+  font-size: 20px;
+  color: black;
+}
+
+.sign-nav-list {
+  font-size: 18px;
+}
+
+.nav-bottom {
+  background-color: antiquewhite;
+}
+
+.nav-ul {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 18px;
+  padding: 0.4rem;
+}
+
+.nav-list {
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  background-color: gainsboro;
+}
+
+.nav-active-link {
+  color: black;
+  opacity: 0.5;
+}
+
+.remove-recipe-btn {
+  padding: 0.2rem 0.5rem;
+}
+
+.recipe-ingredients {
+  display: flex;
+  gap: 1rem;
+}
+
+tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.sign-forms {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
