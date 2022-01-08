@@ -1,0 +1,13 @@
+<nav>
+  <ul class = 'nav-ul'>
+        <li class = "nav-list">
+          <%= link_to "Foods", foods_path, class: change_color_when_active(foods_path) %>
+        </li>
+      <li class = "nav-list">
+        <%= link_to "My recipes", recipes_path, class: change_color_when_active(recipes_path)%>
+      </li>
+      <li class = "nav-list">
+        <%= link_to "Public recipes", public_recipes_path, class: change_color_when_active(public_recipes_path)%>
+      </li>
+  </ul>
+</nav>

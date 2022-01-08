@@ -1,0 +1,24 @@
+<div class = "create-recipe-form">
+  <%= form_with url: recipes_path, model: @recipe do |form| %>
+    <h2>Create a recipe</h2>
+    <div>
+      <%= form.text_field :name, class: "input", size: "50x10", required: true, placeholder: "Recipe name", value: nil %>
+    </div>
+    <div>
+      <%= form.text_field :preparation_time, size: "50x10", required: true, placeholder: "Preparation time", value: nil %>
+    </div>
+    <div>
+      <%= form.text_field :cooking_time, size: "50x10", required: true, placeholder: "Cooking time", value: nil %>
+    </div>
+    <div>
+      <%= form.text_area :description, size: "70x30", required: true, placeholder: "Description", value: nil %>
+    </div>
+    <div>
+      <%= form.check_box :public %>
+      <%= form.label :public %>
+    </div>
+    <div class = "new-btn">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>

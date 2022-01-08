@@ -1,0 +1,6 @@
+<%= link_to "Create a recipe", new_recipe_path, class: "create-recipe-btn btn" %>
+<div class = 'recipe-container'>
+  <% @recipes.each do |recipe| %>
+    <%= render partial: 'recipe', object: recipe %>
+  <% end %>
+</div>
