@@ -1,0 +1,10 @@
+<%# <%= form_with model: @recipe, url: recipe_food_path(@recipe.recipe_foods), method: :patch, class: "form" do |f| %>
+<%= form_with model: @recipe_food, url: recipe_food_path(@recipe_food), method: :patch, local: true do |f| %>
+
+  <div class="field">
+    <%= f.label :food, class: "label" %>
+     <div class="select-option">
+        <%= f.select :food_id, current_user.foods.collect {|food| [food.name, food.id] }, { include_blank: true} %>
+     </div>
+  </div>
+  <$ end %>
