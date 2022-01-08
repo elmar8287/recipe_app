@@ -1,22 +1,17 @@
-<div class="">
-  <%= @recipe.name %>
-</div>
-
-<div class="">
-  <div class="">
-    <p>Preparation time: <%= @recipe.preparation_time %></p>
-    <p>Cooking time: <%= @recipe.cooking_time %></p>
-    <p><%= @recipe.description %></p>
+<div class = "single-recipe-container">
+  <div class="recipe-name">
+    <%= @recipe.name %>
   </div>
-  <div class="">
-    Public: <%= @recipe.public %>
+
+  <div class="single-recipe-data">
+    <div class="recipe-info">
+      <p>Preparation time: <%= @recipe.preparation_time %></p>
+      <p>Cooking time: <%= @recipe.cooking_time %></p>
+      <p><%= @recipe.description %></p>
+    </div>
+    <div class="recipe-info flex-col">
+    <% if can? :update, @recipe%>
+      <%= render "form_switch_btn"%>
+<% end%>
   </div>
-</div>
-
-<div class="">
-  <%= button_to "Add ingredient" %>
-</div>
-
-<div class="recipe-ingredients flex-row">
-
 </div>
